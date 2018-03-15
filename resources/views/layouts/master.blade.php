@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="v5/css/magnific-popup.css" type="text/css" />
 
 	<link rel="stylesheet" href="v5/css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="css/may.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title

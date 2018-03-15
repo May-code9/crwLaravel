@@ -7,18 +7,23 @@ use Illuminate\Http\Request;
 class CRWController extends Controller
 {
     public function index() {
-      return view('pages.index');
+      $index = "current";
+      return view('pages.index', compact('index'));
     }
     public function about() {
-      return view('pages.about');
+      $about = "current";
+      return view('pages.about', compact('about'));
     }
     public function services() {
-      return view('pages.services');
+      $services = "current";
+      return view('pages.services', compact('services'));
     }
     public function blog() {
-      return view('pages.blog');
+      $blog = "current";
+      return view('pages.blog', compact('blog'));
     }
     public function contact() {
-      return view('pages.contact');
+      $contact = "current";
+      return view('pages.contact', compact('contact'));
     }
 }

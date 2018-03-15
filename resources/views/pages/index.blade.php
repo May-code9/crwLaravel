@@ -12,7 +12,7 @@ CRW | Conflict Resolution Works
 				<div class="swiper-slide dark" style="background-image: url('images/slider/swiper/1.jpg');">
 					<div class="container clearfix">
 						<div class="slider-caption slider-caption-center">
-							<h2 data-caption-animate="fadeInUp">Welcome to Canvas</h2>
+							<h2 data-caption-animate="fadeInUp">Welcome to {{ config('app.shortName') }}</h2>
 							<p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on your own Canvas.</p>
 						</div>
 					</div>
@@ -586,7 +586,7 @@ CRW | Conflict Resolution Works
 		<div class="container clear-bottommargin clearfix">
 			<div class="row">
 
-				<div class="col-lg-3 col-md-6 bottommargin">
+				<div class="col-lg-3 col-md-6 bottommargin zoom">
 					<div class="ipost clearfix">
 						<div class="entry-image">
 							<a href="#"><img class="image_fade" src="images/magazine/thumb/1.jpg" alt="Image"></a>
@@ -604,7 +604,7 @@ CRW | Conflict Resolution Works
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 bottommargin">
+				<div class="col-lg-3 col-md-6 bottommargin zoom">
 					<div class="ipost clearfix">
 						<div class="entry-image">
 							<a href="#"><img class="image_fade" src="images/magazine/thumb/2.jpg" alt="Image"></a>
@@ -622,7 +622,7 @@ CRW | Conflict Resolution Works
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 bottommargin">
+				<div class="col-lg-3 col-md-6 bottommargin zoom">
 					<div class="ipost clearfix">
 						<div class="entry-image">
 							<a href="#"><img class="image_fade" src="images/magazine/thumb/3.jpg" alt="Image"></a>
@@ -640,7 +640,7 @@ CRW | Conflict Resolution Works
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 bottommargin">
+				<div class="col-lg-3 col-md-6 bottommargin zoom">
 					<div class="ipost clearfix">
 						<div class="entry-image">
 							<a href="#"><img class="image_fade" src="images/magazine/thumb/4.jpg" alt="Image"></a>

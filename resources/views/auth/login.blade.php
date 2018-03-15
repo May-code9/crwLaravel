@@ -1,69 +1,147 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
+@section('title')
+Login | Register
+@endsection
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-default">
-                <div class="card-header">Login</div>
+<!-- Page Title
+============================================= -->
+<section id="page-title">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+  <div class="container clearfix">
+    <h1>My Account</h1>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Pages</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Login</li>
+    </ol>
+  </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
+</section><!-- #page-title end -->
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+<!-- Content
+============================================= -->
+<section id="content">
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+  <div class="content-wrap">
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+    <div class="container clearfix">
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+      <div class="col_one_third nobottommargin">
 
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+        <div class="well well-lg nobottommargin">
+          <form class="nobottommargin" action="{{ route('login') }}" method="post">
+            @csrf
+            <h3>Login to your Account</h3>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="col_full">
+              <label for="login-form-username">Email Address:</label>
+              <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required />
+              @if ($errors->has('email'))
+              <span class="invalid-feedback">
+                <strong>{{ $errors->first('email') }}</strong>
+              </span>
+              @endif
             </div>
+
+            <div class="col_full">
+              <label for="login-form-password">Password:</label>
+              <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required />
+              @if ($errors->has('password'))
+              <span class="invalid-feedback">
+                <strong>{{ $errors->first('password') }}</strong>
+              </span>
+              @endif
+            </div>
+
+            <div class="col_full nobottommargin">
+              <button class="button button-3d nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+              <a href="#" class="fright">Forgot Password?</a>
+            </div>
+
+          </form>
         </div>
+
+      </div>
+
+      <div class="col_two_third col_last nobottommargin">
+        <h3>Don't have an Account? Register Now.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vel odio non dicta provident sint ex autem mollitia dolorem illum repellat ipsum aliquid illo similique sapiente fugiat minus ratione.</p>
+        <form class="nobottommargin" action="{{ route('register') }}" method="post">
+          @csrf
+          <div class="col_half">
+            <label for="register-form-name">First Name:</label>
+            <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('first_name') }}" required />
+
+            @if ($errors->has('first_name'))
+            <span class="invalid-feedback">
+              <strong>{{ $errors->first('first_name') }}</strong>
+            </span>
+            @endif
+          </div>
+
+          <div class="col_half col_last">
+            <label for="register-form-name">Last Name:</label>
+            <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required />
+
+            @if ($errors->has('last_name'))
+            <span class="invalid-feedback">
+              <strong>{{ $errors->first('last_name') }}</strong>
+            </span>
+            @endif
+          </div>
+
+          <div class="col_half">
+            <label for="register-form-phone">Phone:</label>
+            <input type="text" id="phone" name="phone" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" value="{{ old('phone') }}" required />
+            @if ($errors->has('phone'))
+            <span class="invalid-feedback">
+              <strong>{{ $errors->first('phone') }}</strong>
+            </span>
+            @endif
+          </div>
+
+          <div class="col_half col_last">
+            <label for="register-form-email">Email Address:</label>
+            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+
+            @if ($errors->has('email'))
+            <span class="invalid-feedback">
+              <strong>{{ $errors->first('email') }}</strong>
+            </span>
+            @endif
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="col_half">
+            <label for="register-form-password">Choose Password:</label>
+            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+            @if ($errors->has('password'))
+                <span class="invalid-feedback">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
+            @endif
+          </div>
+
+          <div class="col_half col_last">
+            <label for="register-form-repassword">Re-enter Password:</label>
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="col_full nobottommargin">
+            <button class="button button-3d button-black nomargin" id="register-form-submit" name="register-form-submit" value="register">Register Now</button>
+          </div>
+
+        </form>
+
+      </div>
+
     </div>
-</div>
+
+  </div>
+
+</section><!-- #content end -->
 @endsection
