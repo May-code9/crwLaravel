@@ -15,6 +15,7 @@ return [
 
     'name' => 'Conflict Resolution Works',
     'shortName' => 'CRW',
+    'founder' => 'Williams Ogisi',
 
     /*
     |--------------------------------------------------------------------------

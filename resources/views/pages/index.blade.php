@@ -13,7 +13,7 @@ CRW | Conflict Resolution Works
 					<div class="container clearfix">
 						<div class="slider-caption slider-caption-center">
 							<h2 data-caption-animate="fadeInUp">Welcome to {{ config('app.shortName') }}</h2>
-							<p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on your own Canvas.</p>
+							<p class="d-none d-sm-block" data-caption-animate="fadeInUp" data-caption-delay="200">Conlict Resolution Works Conlict Resolution Works Conlict Resolution Works. Conlict Resolution Works Conlict Resolution Works. Conlict Resolution Works.</p>
 						</div>
 					</div>
 				</div>
@@ -61,16 +61,16 @@ CRW | Conflict Resolution Works
 
 				<div class="col-xl-5">
 					<div class="heading-block topmargin">
-						<h1>Welcome to Canvas.<br>MultiPurpose Template.</h1>
+						<h3>Get Audio, PDF &amp; Video materials on <br>{{ config('app.name') }}.</h3>
 					</div>
-					<p class="lead">Create a website that you are gonna be proud of. Be it Business, Portfolio, Agency, Photography, eCommerce &amp; much more.</p>
+					<p class="lead">{{ config('app.name') }} {{ config('app.name') }} {{ config('app.name') }} {{ config('app.name') }} {{ config('app.name') }}</p>
 				</div>
 
 				<div class="col-xl-7">
 
 					<div style="position: relative; margin-bottom: -60px;" class="ohidden" data-height-xl="426" data-height-lg="567" data-height-md="470" data-height-md="287" data-height-xs="183">
 						<img src="images/services/main-fbrowser.png" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="100" alt="Chrome">
-						<img src="images/services/main-fmobile.png" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400" alt="iPad">
+						<!-- <img src="images/services/main-fmobile.png" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400" alt="iPad">-->
 					</div>
 
 				</div>
